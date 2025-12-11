@@ -1,88 +1,59 @@
 {
-    "tabnine.experimentalAutoImports": true,
-    "cSpell.language": "en,pt-BR",
-    "workbench.colorTheme": "Dracula",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.compactFolders": false,
 
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "node_modules": true
-    },
+  // ESLint (Flat Config)
+  "eslint.experimental.useFlatConfig": true, // Ativa suporte ao eslint.config.js
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
 
-    "explorer.compactFolders": false,
-    "editor.renderLineHighlight": "gutter",
-    "workbench.editor.labelFormat": "short",
-    "extensions.ignoreRecommendations": true,
+  // Formatação automática
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
 
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "never",
+  // Configurações específicas por linguagem
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "open-southeners.laravel-pint"
+  },
 
-    "breadcrumbs.enabled": true,
-    "editor.parameterHints.enabled": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
+  // Prettier
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
 
-    "editor.rulers": [80, 180],
-
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    
-    "files.associations": {
-        ".sequelizerc": "javascript",
-        ".stylelintrc": "json",
-        ".prettierrc": "json"
-    },
-
-    "window.zoomLevel": 0,
-
-    "emmet.syntaxProfiles": { "javascript": "jsx" },
-    "emmet.includeLanguages": { "javascript": "javascriptreact" },
-
-    "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.enabled": false,
-
-    "git.enableSmartCommit": true,
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "liveshare.featureSet": "insiders",
-
-    "typescript.tsserver.log": "verbose",
-    "javascript.suggest.autoImports": true,
-    "typescript.suggest.autoImports": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "screencastMode.onlyKeyboardShortcuts": true,
-
-    "material-icon-theme.folders.associations": {
-        "infra": "app",
-        "entities": "class",
-        "schemas": "class",
-        "typeorm": "database",
-        "repositories": "mappings",
-        "http": "container",
-        "migrations": "tools",
-        "modules": "components",
-        "implementations": "core",
-        "dtos": "typescript",
-        "fakes": "mock",
-        "websockets": "pipe",
-        "protos": "pipe",
-        "grpc": "pipe"
-    },
-
-    "material-icon-theme.files.associations": {
-        "ormconfig.json": "database",
-        "tsconfig.json": "tune",
-        "*.proto": "3d"
-      },
-    
-      "workbench.colorTheme": "Omni"
-
+  // cSpell
+  "cSpell.language": "pt,pt-BR,en",
+  "cSpell.enabled": true,
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.extends": ["cspell-ext-br"],
+  "cSpell.allowCompoundWords": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "typescriptreact": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true
 }
